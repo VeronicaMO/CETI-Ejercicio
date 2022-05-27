@@ -35,8 +35,7 @@ jobs:
         context: .
         push: true 
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/maven-app:test,${{ secrets.DOCKERHUB_USERNAME }}/maven-app:latest
-        
- Deploy:
+  Deploy:
     runs-on: ubuntu-latest
     
     steps:
