@@ -54,3 +54,8 @@ jobs:
             docker stop web1 && docker rm web1
             docker run -d -it  -p 80:8080 --name web1 veronicamo/maven-app:test
           ' 
+    Test:
+        run: |
+           sleep 120
+           curl  ${{ secrets.HOSTNAME  }}:80/webapp/ -I
+ 
