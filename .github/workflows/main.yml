@@ -52,5 +52,5 @@ jobs:
           
             # Now we have got the access of EC2 and we will start the deploy .
             docker stop web1 && docker rm web1
-            docker run -d -p 80:8080 --name web1 {{ secrets.DOCKERHUB_USERNAME }}/maven-app:test
-          '
+            docker run -d -it  -p 80:8080 --name web1 veronicamo/maven-app:test
+          ' 
